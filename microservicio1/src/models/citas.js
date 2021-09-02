@@ -9,7 +9,7 @@ const citasSchema = new Schema(
         especialidad: String,
         fecha: Date,
         hora: String,
-        estafo: String
+        estado: String
     }
 );
 

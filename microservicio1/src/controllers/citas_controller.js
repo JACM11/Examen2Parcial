@@ -29,8 +29,8 @@ class Cita{
     async buscarentrefecha(req,res){
         await Citas.find({
             created_at: {
-                $gte: ISODate("2010-04-29T00:00:00.000Z"),
-                $lt: ISODate("2010-05-01T00:00:00.000Z")
+                $gte: req.body.fecha_inicio,
+                $lt: req.body.fecha_fin
             }
         });
     }

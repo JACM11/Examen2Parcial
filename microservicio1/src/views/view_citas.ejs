@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <% if (data.length > 0) { %>
+        <% for (let i=0; i<data.length; i++) { %> 
+            <tr>
+                <td><%= (i+1) %></td>
+                <td><%= data[i].identificacion %></td>
+                <td><%= data[i].nombre_paciente %></td>
+                <td><%= data[i].doctor %></td>
+                <td><%= data[i].especialidad %></td>
+                <td><%= data[i].fecha %></td>
+                <td><%= data[i].hora %></td>
+                <td><%= data[i].estado %></td>
+
+            </tr>
+        <% } %>   
+    <% } else { %>
+        <tr>
+            <td colspan="6">NO HAY REGISTROS</td>
+        </tr>
+    <% } %>
+</body>
+</html>
